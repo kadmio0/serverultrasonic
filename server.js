@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-    res.send("Distance = "+sensor.distanceValue);
+    res.send("Distancia = "+sensor.distanceValue);
 });
 
 app.post('/',function(req,res){
