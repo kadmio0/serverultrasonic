@@ -11,11 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-    res.send("Distancia = "+sensor.distanceValue);
+    res.send({distance:sensor.distanceValue,led:sensor.ledValue});
 });
 
 app.post('/',function(req,res){
-  sensor.distanceValue=req.body.distance;
+  sensor.distanceValue=parseInt(req.body.distance);
   if(sensor.distanceValue<DISTANCE_LIMIT){
     sensor.ledValue=1;
   }else{
@@ -26,5 +26,5 @@ app.post('/',function(req,res){
 });
 
 app.listen(PORT, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('App listening, for local testing use localhost:3000');
 });
