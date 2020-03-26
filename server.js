@@ -1,7 +1,8 @@
-const DISTANCE_LIMIT = 30;
 let Sensor = require("./Sensor.js");
 let express = require('express');
 let bodyParser = require("body-parser");
+const DISTANCE_LIMIT = 30;
+const PORT = process.env.PORT || '3000';
 let app = express();
 let sensor = new Sensor(); 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,6 +23,6 @@ app.post('/',function(req,res){
   res.send({distance:sensor.distance, led:sensor.ledValue});
 });
 
-app.listen(3000, function () {
+app.listen(PORT, function () {
   console.log('Example app listening on port 3000!');
 });
