@@ -1,11 +1,7 @@
 class Sensor{
     constructor(distance,led){
-        this.led=led;
-        if(distance){
-            this.distance=distance;
-        }else{
-            distance=0;
-        }
+        this.led=led; 
+        this.distance=distance; 
     } 
 
     set distanceValue(value){
