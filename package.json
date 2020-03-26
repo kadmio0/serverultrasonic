@@ -1,0 +1,24 @@
+{
+  "name": "iot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadmio0/serverultrasonic.git"
+  },
+  "author": "Kevin Camacho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kadmio0/serverultrasonic/issues"
+  },
+  "homepage": "https://github.com/kadmio0/serverultrasonic#readme"
+}
