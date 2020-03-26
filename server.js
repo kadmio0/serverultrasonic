@@ -11,18 +11,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-    res.send("Distance = "+sensor.distance);
+    res.send("Distance = "+sensor.distanceValue);
 });
 
 app.post('/',function(req,res){
-  sensor.distance=req.body.distance;
-  if(sensor.distance<DISTANCE_LIMIT){
+  sensor.distanceValue=req.body.distance;
+  if(sensor.distanceValue<DISTANCE_LIMIT){
     sensor.ledValue=1;
   }else{
     sensor.ledValue=0;
   }
-  console.log("Distancia = "+sensor.distance+" - LED: "+sensor.ledValue);
-  res.send({distance:sensor.distance, led:sensor.ledValue});
+  console.log("Distancia = "+sensor.distanceValue+" - LED: "+sensor.ledValue);
+  res.send({distance:sensor.distanceValue, led:sensor.ledValue});
 });
 
 app.listen(PORT, function () {
