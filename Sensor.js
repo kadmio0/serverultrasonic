@@ -1,6 +1,3 @@
-const INITIAL_DISTANCE = 0;
-const INITIAL_LED_VALUE= 0;
-
 class Sensor{
     constructor(distance,led){
         this.led=led;
